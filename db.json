@@ -1,25 +1,32 @@
 {
   "logs": [
     {
-      "id": 1,
-      "message": "Changed hard drive on workstation 005",
-      "attention": false,
-      "date": "03-11-2019",
-      "tech": "Sam Smith"
-    },
-    {
-      "id": 2,
-      "message": "Workstation 007 not posting",
+      "message": "Help connect the cable",
       "attention": true,
-      "date": "03-11-2019",
-      "tech": "John Doe"
+      "tech": "John Doe",
+      "date": "2019-10-31T09:36:50.745Z",
+      "id": 1
     },
     {
-      "id": 3,
-      "message": "Changed memory on workstation 050",
+      "message": "Fix network card",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2019-10-31T09:37:10.899Z",
+      "id": 2
+    },
+    {
+      "message": "Replace broken screen",
       "attention": false,
-      "date": "03-11-2019",
-      "tech": "Sara Wilson"
+      "tech": "Sara Wilson",
+      "date": "2019-10-31T09:37:35.865Z",
+      "id": 3
+    },
+    {
+      "message": "Bring cabel to Tom",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2019-10-31T09:39:10.437Z",
+      "id": 4
     }
   ],
   "techs": [
