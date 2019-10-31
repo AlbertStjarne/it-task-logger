@@ -27,6 +27,13 @@
       "attention": false,
       "tech": "John Doe",
       "date": "2019-10-31T10:53:53.321Z"
+    },
+    {
+      "message": "Fix broken server",
+      "attention": true,
+      "tech": "Sam Smith",
+      "date": "2019-10-31T17:12:27.898Z",
+      "id": 5
     }
   ],
   "techs": [
@@ -44,6 +51,11 @@
       "id": 3,
       "firstName": "Sara",
       "lastName": "Wilson"
+    },
+    {
+      "firstName": "Albert",
+      "lastName": "Stjärne",
+      "id": 4
     }
   ]
 }
