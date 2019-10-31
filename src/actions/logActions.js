@@ -4,24 +4,11 @@ import {
   LOGS_ERROR,
   ADD_LOG,
   DELETE_LOG,
+  UPDATE_LOG,
+  SET_CURRENT,
+  CLEAR_CURRENT,
 } from './types';
 
-// export const getLogs = () => {
-//   // as making async calls has to return a function, not an object
-//   return async (dispatch) => {
-//     setLoading();
-
-//     const res = await fetch('/logs');
-//     const data = await res.json();
-
-//     dispatch({
-//       type: GET_LOGS,
-//       payload: data
-//     })
-//   }
-// };
-
-//refactored + error handling added
 // get logs from server
 export const getLogs = () => async dispatch => {
   try {
@@ -87,6 +74,48 @@ export const deleteLog = id => async dispatch => {
       payload: err.response.data,
     });
   }
+};
+
+// update log on server
+export const updateLog = log => async dispatch => {
+  try {
+    setLoading();
+
+    const res = await fetch(`/logs/${log.id}`, {
+      method: 'PUT',
+      body: JSON.stringify(log),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const data = await res.json();
+
+    dispatch({
+      type: UPDATE_LOG,
+      payload: data,
+    });
+  } catch (err) {
+    dispatch({
+      type: LOGS_ERROR,
+      payload: err.response.data,
+    });
+  }
+};
+
+// set current log
+export const setCurrent = log => {
+  return {
+    type: SET_CURRENT,
+    payload: log,
+  };
+};
+
+// clear current log
+export const clearCurrent = () => {
+  return {
+    type: CLEAR_CURRENT,
+  };
 };
 
 // set loading to true
